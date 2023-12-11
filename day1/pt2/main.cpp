@@ -10,12 +10,12 @@ using namespace std;
 auto subStrWithDifferentLenghtInDigits(unordered_map<string, int>& digits,const string& line, int& i, const uint lenght)
 {
     int digit = 0;
-    if(i + lenght <= line.size())
+    if(i + lenght - 1 < line.size())
     {
         digit = digits[line.substr(i, lenght)];
         if(digit != 0)
         {
-            // i += lenght - 1;
+            i += lenght - 2;
         }
     }
 
